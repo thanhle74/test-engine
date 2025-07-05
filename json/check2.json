@@ -1,0 +1,18 @@
+{
+	"expression": "R1 AND R2",
+	"sub_rules": {
+		"R1": {
+			"type": "VALUE_RANGE",
+			"column": "salary",
+			"db_table": "employees",
+			"min": 8000,
+			"max": 12000
+		},
+		"R2": {
+			"type": "VALUE_TEMPLATE",
+			"column": "phone_number",
+			"db_table": "employees",
+			"regex": "^515\\."
+		}
+	}
+}

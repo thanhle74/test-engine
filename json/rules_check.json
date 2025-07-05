@@ -1,0 +1,21 @@
+{
+    "rule_id": "R001",
+    "rule_name": "KiemTraTuoiVaSDT",
+    "type": "COMPLEX",
+    "expression": "RULE_A AND RULE_B",
+    "sub_rules": {
+        "RULE_A": {
+            "type": "VALUE_RANGE",
+            "column": "age",
+            "min": 18,
+            "max": 65,
+            "db_table": "customers"
+        },
+        "RULE_B": {
+            "type": "VALUE_TEMPLATE",
+            "column": "phone_number",
+            "regex": "^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[1-9]|9[0-4|6-9])[0-9]{7}$",
+            "db_table": "customers"
+        }
+    }
+}
