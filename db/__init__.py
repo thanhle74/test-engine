@@ -2,7 +2,7 @@ import sqlite3
 import re
 
 def get_db_connection():
-    conn = sqlite3.connect("data.db")
+    conn = sqlite3.connect("db/data.db")
     conn.row_factory = sqlite3.Row
 
     # ✅ Tạo hàm REGEXP
